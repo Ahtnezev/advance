@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
+use Livewire\Livewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Livewire::setUpdateRoute(function ($handle) {
+    return Route::post('/livewire/update', $handle);
 });
+
+Livewire::setScriptRoute(function ($handle) {
+    return Route::get('/livewire/livewire.js', $handle);
+});
+
+// 👽 config/recycle.php
+
+Route::get('/', IndexController::class);

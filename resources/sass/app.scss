@@ -1,0 +1,982 @@
+@import './partials/colors.scss';
+@import './partials/customclasses.scss';
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.3;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Audiowide", sans-serif;
+}
+
+// Por si llegan abrir la web en una TV o en una resolución 4K XD
+.navbar, #banner, #servicios, #productos-calidad, #nosotros, #contacto, #workshops, #footer {
+    max-width: 1920px;
+    margin: auto;
+}
+
+.navbar {
+    background-color: var(--white);
+    padding: 1.5rem 0.5rem;
+    .navbar-brand {
+        .__logo_header {
+            height: 35px;
+        }
+    }
+    .collapse {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: var(--gray);
+                    font-weight: 600;
+                    &.active {
+                        color: var(--orange);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#banner {
+    .banner__img {
+        height: 240px;
+    }
+    .banner__content {
+        right: 4%;
+        top: calc(100% / 7);
+        margin-left: auto;
+        max-width: 70%;
+        .banner__title, .banner__info {
+            color: var(--white);
+        }
+        .banner__title {
+            font-size: 1.5rem;
+        }
+        .banner__info {
+            font-size: .9rem;
+        }
+    }
+}
+
+#servicios {
+    .servicios__content {
+        margin-top: 40px;
+        .nuestros__servicios {
+            .servicios__paint_protection {
+                max-width: 90%;
+                margin: auto auto 2rem auto;
+                .servicios__subtitle {
+                    font-size: 1.35rem;
+                }
+                h3.orange {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: .9rem;
+                    text-align: justify;
+                }
+                .servicios__list > li {
+                    font-size: 0.85rem;
+                }
+            }
+            .servicios__slider {
+                margin-top: 1rem;
+                margin-bottom: 5rem;
+                .slider__background {
+                    max-width: 100%;
+                    right: 0;
+                    z-index: 0;
+                }
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide > .slider__image {
+                            height: 160px;
+                        }
+                    }
+                }
+                .swiper-pagination {
+                    z-index: 1;
+                    bottom: -50px;
+                    .swiper-pagination-bullet {
+                        background: var(--orange);
+                        width: 13px;
+                        height: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#productos-calidad {
+    h2.subtitle {
+        margin-top: 1rem;
+        margin-bottom: 2.75rem;
+    }
+    .productos__calidad {
+        width: 130px;
+    }
+    .wrap__content, .automotriz__content {
+        margin-top: 5rem;
+        max-width: 100%;
+        .bg {
+            .wrap__bg, .automotriz__bg {
+                width: 100%;
+            }
+            .wrap__image, .automotriz__image {
+                position: absolute;
+                height: 85%;
+                bottom: 5%;
+            }
+            .automotriz__image.image-in {
+                width: 90%;
+                height: 90%;
+                right: 0;
+            }
+        }
+        .info {
+            max-width: 90%;
+            margin: auto;
+            p.fw-500 {
+                text-align: justify;
+            }
+        }
+    }
+}
+
+#nosotros {
+    margin-top: 5rem;
+    .nosotros__content {
+        h2.subtitle {
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .mayor__proteccion {
+            .mayor__proteccion__logo {
+                max-width: 170px;
+                display: block;
+                margin: 1.45rem auto 2rem auto;
+            }
+            .btn {
+                height: 60px;
+            }
+        }
+        .nosotros__banner {
+            height: 200px;
+        }
+        .nosotros__info {
+            .nosotros__slider {
+                margin-top: 1rem;
+                margin-bottom: 5rem;
+                .slider__background {
+                    max-width: 100%;
+                    right: 0;
+                    z-index: 0;
+                }
+                .swiper-nosotros {
+                    .swiper-wrapper {
+                        .swiper-slide > .slider__image {
+                            height: 350px;
+                        }
+                    }
+                }
+                .swiper-pagination-nosotros {
+                    position: absolute;
+                    z-index: 1;
+                    bottom: -50px;
+                    left: 90%;
+                    transform: translate(-50%, -50%);
+                    .swiper-pagination-bullet {
+                        background: var(--orange);
+                        width: 13px;
+                        height: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contacto {
+    .contacto__section {
+        .form {
+            .btn {
+                height: 50px;
+            }
+        }
+    }
+}
+
+#workshops {
+    .workshops__content {
+        margin-top: 5rem;
+    }
+}
+
+#footer {
+    .footer__content {
+        margin-top: 5rem;
+        .simple__list > li {
+            font-size: .9rem;
+        }
+        .advance__logo {
+            width: 200px;
+            display: block;
+            margin: auto;
+        }
+        .social {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            .social__insta, .social__face {
+                width: 50px;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px)
+{
+    #godown{
+        height: 112px;
+    }
+
+    .navbar {
+        padding: 1.65rem 0.35rem;
+        .navbar-brand {
+            .__logo_header {
+                height: 50px;
+            }
+        }
+    }
+
+    #banner {
+        .banner__img {
+            height: 275px;
+        }
+        .banner__content {
+            right: 5%;
+            top: calc(100% / 6.5);
+            max-width: 70%;
+            .banner__title {
+                font-size: 1.75rem;
+            }
+            .banner__info {
+                font-size: .95rem;
+            }
+        }
+
+    }
+
+    #servicios {
+        .servicios__content {
+            .nuestros__servicios {
+                .servicios__paint_protection {
+                    max-width: 85%;
+                    .servicios__subtitle {
+                        font-size: 1.5rem;
+                    }
+                    h3.orange {
+                        font-size: 1.25rem;
+                    }
+                    p {
+                        font-size: 1rem;
+                    }
+                    .servicios__list > li {
+                        font-size: 0.95rem;
+                    }
+                }
+                .servicios__slider {
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide > .slider__image {
+                                height: 195px;
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        bottom: -45px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    #productos-calidad {
+        h2.subtitle {
+            font-size: 1.85rem;
+        }
+        .productos__calidad {
+            width: 130px;
+        }
+        .wrap__content, .automotriz__content {
+            .wrap__image, .automotriz__image {
+                height: 170px;
+            }
+        }
+    }
+
+    #nosotros {
+        .nosotros__info {
+            .nosotros__slider {
+                .swiper-nosotros {
+                    .swiper-wrapper {
+                        .swiper-slide > .slider__image {
+                            height: 195px;
+                        }
+                    }
+                }
+                .swiper-pagination-nosotros {
+                    bottom: -45px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 425px)
+{
+    #godown{
+        height: 123px;
+    }
+
+    .navbar {
+        padding: 2rem 0.35rem;
+    }
+
+    #banner {
+        .banner__img {
+            height: 300px;
+        }
+        .banner__content {
+            right: 6%;
+            top: calc(100% / 5.5);
+            .banner__title {
+                font-size: 2.15rem;
+            }
+            .banner__info {
+                font-size: 1.03rem;
+            }
+        }
+    }
+
+    #servicios {
+        .servicios__content {
+            .nuestros__servicios {
+                .servicios__paint_protection {
+                    .servicios__subtitle {
+                        font-size: 1.75rem;
+                    }
+                    h3.orange {
+                        font-size: 1.45rem;
+                    }
+                    p, .servicios__list > li {
+                        font-size: 1rem;
+                    }
+                }
+                .servicios__slider {
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide > .slider__image {
+                                height: 220px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #productos-calidad {
+        .wrap__content, .automotriz__content {
+            .wrap__image, .automotriz__image {
+                height: 200px;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 576px)
+{
+    #banner {
+        .banner__img {
+            height: 415px;
+        }
+        .banner__content {
+            right: 5%;
+            max-width: 55%;
+            .banner__title {
+                font-size: 2.45rem;
+            }
+            .banner__info {
+                font-size: 1.05rem;
+            }
+        }
+    }
+
+    #servicios {
+        .servicios__content {
+            .nuestros__servicios {
+                .servicios__slider {
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide > .slider__image {
+                                height: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #productos-calidad {
+        .wrap__content, .automotriz__content {
+            .wrap__image, .automotriz__image {
+                height: 270px;
+            }
+        }
+    }
+
+    #footer {
+        .footer__content {
+            .simple__list > li {
+                font-size: .95rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px)
+{
+    #banner {
+        .banner__img {
+            height: 550px;
+        }
+        .banner__content {
+            .banner__title {
+                font-size: 3.25rem;
+            }
+            .banner__info {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    #servicios {
+        .servicios__content {
+            .nuestros__servicios {
+                .servicios__slider {
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide > .slider__image {
+                                height: 400px;
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        bottom: -60px;
+                    }
+                }
+            }
+        }
+    }
+
+    #productos-calidad {
+        h2.subtitle {
+            font-size: 1.65rem;
+        }
+        .wrap__content, .automotriz__content {
+            .wrap__image, .automotriz__image {
+                position: absolute;
+                top: 10%;
+                height: 310px;
+            }
+        }
+        .wrap__content {
+            .wrap__image {
+                left: 5%;
+            }
+        }
+        .automotriz__content {
+            .automotriz__image {
+                right: 0;
+            }
+        }
+    }
+
+    #nosotros {
+        .nosotros__banner {
+            min-height: 270px;
+            max-height: 280px;
+        }
+    }
+
+    #footer {
+        .footer__content {
+            .a {
+                position: absolute;
+                bottom: 0;
+                max-width: 100%;
+            }
+            .simple__list > li {
+                font-size: 1rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 992px)
+{
+
+    .navbar {
+        .navbar-brand {
+            .__logo_header {
+                height: 55px;
+            }
+        }
+        .collapse {
+            .navbar-nav {
+                .nav-item {
+                    margin: auto .75rem;
+                    .nav-link {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            .insta, .face {
+                width: 40px;
+            }
+        }
+    }
+
+    #banner {
+        .banner__img {
+            height: 500px;
+        }
+        .banner__content {
+            max-width: 48%;
+            .banner__title {
+                font-size: 3.5rem;
+            }
+            .banner__info {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    #servicios {
+        min-height: calc(100vh - 310px);
+        .servicios__content {
+            .nuestros__servicios {
+                .servicios__paint_protection, .servicios__slider {
+                    padding: 0;
+                    margin: 0;
+                }
+                .servicios__paint_protection {
+                    width: 40%;
+                    margin: auto;
+                    padding: 0 1.5rem;
+                }
+                .servicios__slider {
+                    width: 60%;
+                    max-width: 100%;
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide > .slider__image {
+                                height: 310px;
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        bottom: -60px;
+                    }
+                }
+            }
+        }
+    }
+
+    #productos-calidad {
+        h2.subtitle {
+            margin-bottom: 4rem;
+            font-size: 1.85rem;
+        }
+        .automotriz__content {
+            .bg {
+                .automotriz__image {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    #nosotros {
+        .nosotros__content {
+            h2.subtitle {
+                font-size: 2.15rem;
+            }
+            .mayor__proteccion {
+                .mayor__proteccion__logo {
+                    max-width: 210px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1200px)
+{
+
+    #banner {
+        .banner__content {
+            max-width: 42%;
+            top: calc(100% / 5);
+            .banner__title {
+                font-size: 3.5rem;
+            }
+            .banner__info {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    #servicios {
+        .servicios__content {
+            .servicios__subtitle {
+                margin-top: 5rem;
+            }
+            .nuestros__servicios {
+                .servicios__paint_protection {
+                    max-width: 450px;
+                }
+                .servicios__slider {
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide > .slider__image {
+                                height: 310px;
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        bottom: -120px;
+                    }
+                    .swiper-pagination {
+                        .swiper-pagination-bullet {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #productos-calidad {
+        h2.subtitle {
+            margin-top: 4rem;
+            font-size: 2rem;
+        }
+        .productos__calidad {
+            width: 180px;
+        }
+        .wrap__content, .automotriz__content {
+            .info {
+                max-width: 320px;
+            }
+        }
+    }
+
+    #nosotros {
+        .nosotros__banner {
+            min-height: 310px;
+            max-height: 320px;
+        }
+        .nosotros__content {
+            margin-top: 8rem;
+            h2.subtitle {
+                font-size: 2.35rem;
+            }
+            .nosotros__info {
+                p.fw-500 {
+                    font-size: 1.1rem;
+                }
+            }
+            .mayor__proteccion {
+                .mayor__proteccion__logo {
+                    max-width: 230px;
+                }
+            }
+        }
+    }
+
+    #footer {
+        .footer__content {
+            .advance__logo {
+                width: 250px;
+            }
+            .a {
+                bottom: 22%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+            }
+            .simple__list > li {
+                font-size: 1rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1400px)
+{
+    p {
+        font-size: 1.1rem;
+    }
+
+    #godown {
+        height: 145px;
+    }
+
+    .navbar {
+        .navbar-brand {
+            .__logo_header {
+                height: 75px;
+            }
+        }
+        .collapse {
+            .navbar-nav {
+                .nav-item {
+                    margin: auto 1.45rem;
+                    .nav-link {
+                        font-size: 1.35rem;
+                    }
+                }
+            }
+            .insta, .face {
+                width: 45px;
+            }
+        }
+    }
+
+    #banner {
+        .banner__img {
+            height: 585px;
+        }
+        .banner__content {
+            top: calc(100% / 4);
+            max-width: 35%;
+            .banner__title {
+                font-size: 3.5rem;
+            }
+            .banner__info {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    #servicios {
+        .servicios__content {
+            .servicios__subtitle {
+                margin-top: 3.5rem;
+            }
+            .nuestros__servicios {
+                .servicios__paint_protection {
+                    padding: 0;
+                }
+                .servicios__slider {
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide > .slider__image {
+                                height: 440px;
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        bottom: -40px;
+                    }
+                }
+            }
+        }
+    }
+
+    #productos-calidad {
+        h2.subtitle {
+            margin-top: 6rem;
+            font-size: 2.15rem;
+        }
+        .productos__calidad {
+            width: 190px;
+        }
+    }
+
+    #nosotros {
+        .nosotros__banner {
+            min-height: 360px;
+            max-height: 370px;
+        }
+        .nosotros__content {
+            h2.subtitle {
+                font-size: 2.45rem;
+            }
+            .nosotros__info {
+                p.fw-500 {
+                    font-size: 1.15rem;
+                }
+            }
+            .mayor__proteccion {
+                .mayor__proteccion__logo {
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+
+    #footer {
+        .footer__content {
+            .advance__logo {
+                width: 280px;
+            }
+            .a {
+                bottom: 18%;
+            }
+            .c {
+                .copy {
+                    font-size: 1.15rem;
+                }
+            }
+            .simple__list > li {
+                font-size: 1.15rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1920px)
+{
+
+    #banner {
+        .banner__img {
+            height: calc(100vh - 110px);
+            max-height: calc(100vh - 110px);
+        }
+        .banner__content {
+            max-width: 30%;
+            .banner__title {
+                font-size: 4rem;
+            }
+            .banner__info {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    #servicios {
+        .servicios__content {
+            .servicios__subtitle {
+                margin-top: 4rem;
+                font-size: 4rem;
+            }
+            .nuestros__servicios {
+                .servicios__paint_protection {
+                    h3.orange {
+                        font-size: 2.45rem;
+                    }
+                    p, .servicios__list > li {
+                        font-size: 1.2rem;
+                    }
+                }
+                .servicios__slider {
+                    .slider__background {
+                        width: 100%;
+                    }
+                    .swiper {
+                        .swiper-wrapper {
+                            .swiper-slide > .slider__image {
+                                height: 600px;
+                            }
+                        }
+                    }
+                    .swiper-pagination {
+                        bottom: -65px;
+                    }
+                }
+            }
+        }
+    }
+
+    #productos-calidad {
+        h2.subtitle {
+            margin-top: 6rem;
+            font-size: 2.45rem;
+        }
+        .productos__calidad {
+            width: 240px;
+        }
+
+        .wrap__content, .automotriz__content {
+            .info {
+                max-width: 400px;
+            }
+        }
+        .wrap__content {
+            .info {
+                margin-top: 5rem;
+            }
+        }
+        .automotriz__content {
+            .info {
+                margin-top: 6rem;
+            }
+        }
+
+    }
+
+    #nosotros {
+        .nosotros__banner {
+            min-height: 500px;
+            max-height: 520px;
+        }
+        .nosotros__content {
+            h2.subtitle {
+                font-size: 2.75rem;
+            }
+            .nosotros__info {
+                p.fw-500 {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+
+    #footer {
+        .footer__content {
+            .advance__logo {
+                width: 400px;
+            }
+            .a {
+                bottom: 18%;
+            }
+            .c {
+                .copy {
+                    font-size: 1.15rem;
+                }
+            }
+            .simple__list > li {
+                font-size: 1.15rem;
+            }
+        }
+    }
+
+}

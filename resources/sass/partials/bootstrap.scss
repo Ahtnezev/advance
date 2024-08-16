@@ -1,0 +1,4 @@
+// Separamos bootstrap ya que demora mucho tiempo ya que carga todos los estilos por defecto
+// ej. si queremos hacer un cambio visual (local) tarda 2-3 segundos en mostrar el cambio
+// en cambio separando los estilos el cambio es instantáneo.
+// @import 'bootstrap/scss/bootstrap';

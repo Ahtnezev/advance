@@ -1,0 +1,93 @@
+#godown{
+    height: 93px;
+}
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    outline: none;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--orange);
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+.navbar-toggler {
+    border: none;
+}
+
+.x-icon {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.x-icon div {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--orange);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 4px;
+}
+
+.x-icon div:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+.text-gray {
+    color: var(--gray);
+}
+.text-justify {
+    text-align: justify;
+}
+.btn__orange {
+    transition: all 300ms ease-in;
+    background-color: var(--orange);
+    color: var(--white);
+    &:hover {
+        border: 1px dotted;
+    }
+}
+.bg-gray {
+    background-color: var(--gray-footer);
+}
+.orange {
+    color: var(--orange);
+}
+.simple__list {
+    list-style: none;
+    padding: 0;
+}
+.image-in {
+    // background-image: url('/public/images/content/banner_01.webp');
+    width: 100%;
+    // height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
