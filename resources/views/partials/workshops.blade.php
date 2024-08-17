@@ -2,9 +2,7 @@
     <div class="row">
         <div class="col-12">
             <h2 class="subtitle orange text-center display-4 mb-5">{{ config('recycle.web.workshops.title') }}</h2>
-            <div class="mapa mb-5">
-                <iframe src="{{ config('recycle.web.workshops.mapa_url') }}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <div id="map" class="mapa mb-5" style="height: 500px;"></div><!-- Leaflet JS -->
         </div> <!-- 12 -->
 
         <div class="col-12 col-md-6 col-lg-4">
