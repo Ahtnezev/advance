@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Mail\ContactoMail;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
@@ -26,6 +27,9 @@ class LwEnviarMail extends Component
     #[Validate('email', message: 'Correo no válido*')]
     public string $correo = '';
 
+    #[Validate('required', message: 'Completar reCAPTCHA')]
+    public $recaptchaToken;
+
     /*
      * Enviar correo
     */
@@ -34,19 +38,31 @@ class LwEnviarMail extends Component
         // Validamos todos los rules que colocamos arriba de las properties
         $this->validate();
 
+        // Verificar reCaptcha
+         $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => env('RECAPTCHA_SECRET_KEY'),
+            'response' => $this->recaptchaToken,
+        ]);
+
+        if (!$response->json('success')) {
+            return session()->flash('error', 'reCaptcha falló verificación. Intenta nuevamente.');
+        }
+
         // Hacemos envío del correo
+        $data = [
+            'name' => $this->nombre,
+            'lastname' => $this->apellido,
+            'whatsapp' => $this->whatsapp,
+            'email' => $this->correo,
+        ];
+
         Mail::to(trim($this->correo))
-            ->send(new ContactoMail(
-                trim($this->nombre),
-                trim($this->apellido),
-                trim($this->whatsapp),
-                trim($this->correo),
-            ));
+            ->send(new ContactoMail($data));
 
         sleep(2); // Sólo para apreciar la animación que estamos haciendo algo chido al usuario
         $this->reset(); // Limpiamos los campos
         session()->flash('mail-sent', '✅ Correo enviado correctamente!');
-        $this->dispatch('close-alert'); // después de 4s ocultamos el alert con efecto fade-out
+        $this->dispatch('close-alert'); // después de 3s ocultamos el alert con efecto fade-out
     }
 
     // Formulario

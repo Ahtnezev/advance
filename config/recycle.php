@@ -1,9 +1,14 @@
 <?php
-
-// Archivo para obtener textos que se van a reciclar en todo el sitio.
+/**------------------------------------------------------------------------
+ *?   Archivo para obtener textos que se van a reciclar en todo el sitio.
+ *------------------------------------------------------------------------**/
 
 return [
     'web' => [
+        'metas' => [
+            'keywords' => 'ADVANCE KEYWORDS...',
+            'description' => 'ADVANCE DESCRIPTION...',
+        ],
         'navbar' => [
             'inicio' => 'INICIO',
             'servicios' => 'SERVICIOS',
@@ -90,7 +95,6 @@ return [
         ],
         'workshops' => [
             'title' => 'WORKSHOPS',
-            'mapa_url' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12577.099175424957!2d-103.34974780901963!3d20.67684710083348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1faa928f63f%3A0x25dcb2cdab10691a!2sGuadalajara%20Cathedral!5e1!3m2!1sen!2smx!4v1723686144519!5m2!1sen!2smx',
         ],
         'footer' => [
             'aviso_privacidad' => 'Aviso de privacidad',

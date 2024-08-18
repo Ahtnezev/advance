@@ -11,21 +11,21 @@
                     <div class="numeros mb-5 mb-md-0">
                         <div class="first mb-4">
                             <div>
-                                <img src="{{ asset('images/content/whatsapp.svg') }}" width="30" height="30" alt="">
+                                <img src="{{ asset('images/content/whatsapp.svg') }}" width="30" height="30">
                                 <a class="fw-500 text-decoration-none text-dark" href="{{ config('recycle.web.contacto.wp_1.url') }}" target="_blank">{{ config('recycle.web.contacto.wp_1.txt') }}</a>
                             </div>
                             <div class="mt-2">
-                                <img src="{{ asset('images/content/email.svg') }}" width="30" height="30" alt="">
+                                <img src="{{ asset('images/content/email.svg') }}" width="30" height="30">
                                 <a class="fw-500 text-decoration-none text-dark" href="{{ config('recycle.web.contacto.mail_1.url') }}">{{ config('recycle.web.contacto.mail_1.txt') }}</a>
                             </div>
                         </div>
                         <div class="second">
                             <div>
-                                <img src="{{ asset('images/content/whatsapp.svg') }}" width="30" height="30" alt="">
+                                <img src="{{ asset('images/content/whatsapp.svg') }}" width="30" height="30">
                                 <a class="fw-500 text-decoration-none text-dark" href="{{ config('recycle.web.contacto.wp_2.txt') }}" target="_blank">{{ config('recycle.web.contacto.wp_2.txt') }}</a>
                             </div>
                             <div class="mt-2">
-                                <img src="{{ asset('images/content/email.svg') }}" width="30" height="30" alt="">
+                                <img src="{{ asset('images/content/email.svg') }}" width="30" height="30">
                                 <a class="fw-500 text-decoration-none text-dark" href="{{ config('recycle.web.contacto.mail_2.url') }}">{{ config('recycle.web.contacto.mail_2.txt') }}</a>
                             </div>
                         </div>

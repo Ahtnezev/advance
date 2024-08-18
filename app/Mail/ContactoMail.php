@@ -16,12 +16,7 @@ class ContactoMail extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(
-        public $nombre,
-        public $apellido,
-        public $whatsapp,
-        public $correo,
-    ) {}
+    public function __construct(public $data = []) {}
 
     /**
      * Get the message envelope.
@@ -41,10 +36,10 @@ class ContactoMail extends Mailable
         return new Content(
             markdown: 'mail',
             with: [
-                'nombre' => $this->nombre,
-                'apellido' => $this->apellido,
-                'whatsapp' => $this->whatsapp,
-                'correo' => $this->correo,
+                'name' => $this->data['name'],
+                'lastname' => $this->data['lastname'],
+                'whatsapp' => $this->data['whatsapp'],
+                'email' => $this->data['email']
             ]
         );
     }

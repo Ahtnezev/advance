@@ -41,7 +41,6 @@
     </div>
 </nav>
 
-
 <div class="offcanvas offcanvas-start" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
     <div class="offcanvas-header bg-gray">
         <h5 class="offcanvas-title" id="staticBackdropLabel">{{ env('APP_NAME', 'ADVANCE') }}</h5>
@@ -72,3 +71,6 @@
         </div>
     </div>
 </div>
+
+<!-- This div make the magic :) -->
+<div class="godown-60" id="godown"></div>

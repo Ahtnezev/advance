@@ -21,11 +21,8 @@
                                 </div> <!-- swiper-slide -->
                             @endforeach
                         </div> <!-- swiper-wraper -->
-
                     </div> <!-- swiper -->
-
-                    <div class="swiper-pagination-nosotros"></div>
-
+                    <div class="swiper-pagination swiper-pagination-nosotros"></div>
                 </div> <!-- __slider -->
             </div>
         </div>

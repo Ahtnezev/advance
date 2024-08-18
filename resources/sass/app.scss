@@ -95,15 +95,6 @@ h1,h2,h3,h4,h5,h6 {
                         }
                     }
                 }
-                .swiper-pagination {
-                    z-index: 1;
-                    bottom: -50px;
-                    .swiper-pagination-bullet {
-                        background: var(--orange);
-                        width: 13px;
-                        height: 13px;
-                    }
-                }
             }
         }
     }
@@ -181,18 +172,6 @@ h1,h2,h3,h4,h5,h6 {
                         .swiper-slide > .slider__image {
                             height: 350px;
                         }
-                    }
-                }
-                .swiper-pagination-nosotros {
-                    position: absolute;
-                    z-index: 1;
-                    bottom: -50px;
-                    left: 90%;
-                    transform: translate(-50%, -50%);
-                    .swiper-pagination-bullet {
-                        background: var(--orange);
-                        width: 13px;
-                        height: 13px;
                     }
                 }
             }

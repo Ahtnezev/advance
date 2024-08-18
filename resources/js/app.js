@@ -41,7 +41,7 @@ const swServicios = new Swiper(".swiper-servicios", {
 		enabled: true, // u can slide items using keyboard arrows
 	},
 	pagination: {
-		el: ".swiper-pagination",
+		el: ".swiper-pagination-servicios",
 		clickable: true,
 	},
 	breakpoints: {

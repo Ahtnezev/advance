@@ -1,6 +1,13 @@
 #godown{
     height: 93px;
 }
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        background: var(--orange);
+        width: 13px;
+        height: 13px;
+    }
+}
 .burger-icon {
     display: flex;
     flex-direction: column;

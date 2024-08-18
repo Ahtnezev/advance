@@ -23,7 +23,7 @@
                     @endforeach
                 </div> <!-- swiper-wraper -->
             </div> <!-- swiper -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination swiper-pagination-servicios"></div>
         </div> <!-- __slider -->
     </div> <!-- nuestros__servicios -->
 </div> <!-- servicios__content -->
