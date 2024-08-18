@@ -16,15 +16,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
 
+        let w = window.innerWidth;
         // Remover clase active de todos los enlaces
         document.querySelectorAll('nav ul li a').forEach(link => {
             link.classList.remove('active');
+            // Cuando esté en algún móvil ocultará el menú
+            if (w <= 576) {
+                document.getElementById('test').click();
+            }
         });
 
         // Agregar clase active al enlace clicado
         this.classList.add('active');
     });
 });
+
+
+// Agregar auto clase active mientras el usuario hace scroll
+// document.addEventListener('DOMContentLoaded', function () {
+//     const sections = document.querySelectorAll('section');
+//     const navLinks = document.querySelectorAll('nav ul li a');
+
+//     const observer = new IntersectionObserver(
+//         (entries) => {
+//             entries.forEach((entry) => {
+//                 if (entry.isIntersecting) {
+//                     // Remueve la clase 'active' de todos los enlaces
+//                     navLinks.forEach((link) => {
+//                         link.classList.remove('active');
+//                     });
+//                     // Agrega la clase 'active' al enlace que corresponde a la sección visible
+//                     const activeLink = document.querySelector(`nav ul li a[href="#${entry.target.id}"]`);
+//                     if (activeLink) {
+//                         activeLink.classList.add('active');
+//                     }
+//                 }
+//             });
+//         },
+//         { threshold: 0.5 } // Cambia el umbral según tus necesidades
+//     );
+
+//     sections.forEach((section) => {
+//         observer.observe(section);
+//     });
+// });
+
 
 /**------------------------------------------------------------------------
  *?                      Slider para section servicios

@@ -517,7 +517,6 @@ h1,h2,h3,h4,h5,h6 {
 
 @media screen and (min-width: 992px)
 {
-
     .navbar {
         .navbar-brand {
             .__logo_header {
@@ -527,10 +526,7 @@ h1,h2,h3,h4,h5,h6 {
         .collapse {
             .navbar-nav {
                 .nav-item {
-                    margin: auto .75rem;
-                    .nav-link {
-                        font-size: 1.1rem;
-                    }
+                    margin: auto .5rem;
                 }
             }
             .insta, .face {
@@ -616,6 +612,18 @@ h1,h2,h3,h4,h5,h6 {
 
 @media screen and (min-width: 1200px)
 {
+    .navbar {
+        .collapse {
+            .navbar-nav {
+                .nav-item {
+                    margin: auto .75rem;
+                    .nav-link {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
 
     #banner {
         .banner__content {
