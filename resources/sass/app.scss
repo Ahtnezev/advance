@@ -15,6 +15,11 @@ h1,h2,h3,h4,h5,h6 {
     margin: auto;
 }
 
+#navMenu, #main {
+    transition: opacity 1.5s ease-in-out;
+    opacity: 0;
+}
+
 .navbar {
     background-color: var(--white);
     padding: 1.5rem 0.5rem;
@@ -385,6 +390,15 @@ h1,h2,h3,h4,h5,h6 {
 
 @media screen and (min-width: 576px)
 {
+    #loading {
+        #loading-image {
+            top: 36%;
+        }
+        h2 {
+            top: 50%;
+        }
+    }
+
     #banner {
         .banner__img {
             height: 415px;
@@ -727,6 +741,12 @@ h1,h2,h3,h4,h5,h6 {
 
 @media screen and (min-width: 1400px)
 {
+    #loading {
+        #loading-image {
+            top: 35%;
+        }
+    }
+
     p {
         font-size: 1.1rem;
     }

@@ -1,6 +1,22 @@
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
+document.body.style.overflow = 'hidden';
+
+// Esperar a que toda la página se cargue
+window.addEventListener('load', function() {
+    // Ocultar el loader y remover overflow al body
+    document.body.style.opacity = '1';
+    const nav = document.querySelector('#navMenu');
+    const main = document.querySelector('#main');
+    nav.style.opacity = '1';
+    main.style.opacity = '1';
+    const loader = document.getElementById('loading');
+    setTimeout(() => { loader.style.display = 'none'; }, 500);
+    // Eliminar overflow: hidden del body para permitir el desplazamiento
+    document.body.style.overflow = 'auto';
+});
+
 /**------------------------------------------------------------------------
  **                     Links deslizar con efecto smooth
  *------------------------------------------------------------------------**/
@@ -30,37 +46,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         this.classList.add('active');
     });
 });
-
-
-// Agregar auto clase active mientras el usuario hace scroll
-// document.addEventListener('DOMContentLoaded', function () {
-//     const sections = document.querySelectorAll('section');
-//     const navLinks = document.querySelectorAll('nav ul li a');
-
-//     const observer = new IntersectionObserver(
-//         (entries) => {
-//             entries.forEach((entry) => {
-//                 if (entry.isIntersecting) {
-//                     // Remueve la clase 'active' de todos los enlaces
-//                     navLinks.forEach((link) => {
-//                         link.classList.remove('active');
-//                     });
-//                     // Agrega la clase 'active' al enlace que corresponde a la sección visible
-//                     const activeLink = document.querySelector(`nav ul li a[href="#${entry.target.id}"]`);
-//                     if (activeLink) {
-//                         activeLink.classList.add('active');
-//                     }
-//                 }
-//             });
-//         },
-//         { threshold: 0.5 } // Cambia el umbral según tus necesidades
-//     );
-
-//     sections.forEach((section) => {
-//         observer.observe(section);
-//     });
-// });
-
 
 /**------------------------------------------------------------------------
  *?                      Slider para section servicios
@@ -121,7 +106,6 @@ const swNosotros = new Swiper(".swiper-nosotros", {
  **                     Integración de Map con Leafletjs
  *------------------------------------------------------------------------**/
 function getMap() {
-
     const markerIcon = L.icon({
         iconUrl: '../../images/content/location_marker.png',
         // shadowUrl: 'url-imagen-sombreado',
@@ -154,7 +138,6 @@ function getMap() {
     };
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', options).addTo(map);
-
 
 }
 

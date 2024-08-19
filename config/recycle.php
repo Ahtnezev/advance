@@ -8,6 +8,7 @@ return [
         'metas' => [
             'keywords' => 'ADVANCE KEYWORDS...',
             'description' => 'ADVANCE DESCRIPTION...',
+            'theme_color' => '#FF8100', // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
         ],
         'navbar' => [
             'inicio' => 'INICIO',
