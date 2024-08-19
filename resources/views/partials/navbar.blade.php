@@ -30,10 +30,10 @@
             </ul>
             {{-- Redes sociales --}}
             <div class="d-flex ps-3 pe-xl-5">
-                <a href="#">
+                <a href="{{ config('recycle.web.social.url.facebook') }}" target="_blank">
                     <img class="insta img-fluid me-3 me-lg-0 me-xl-3" src="{{ asset('images/content/instagram.svg') }}" alt="Instagram Advance">
                 </a>
-                <a href="#">
+                <a href="{{ config('recycle.web.social.url.instagram') }}" target="_blank">
                     <img class="face img-fluid" src="{{ asset('images/content/facebook.svg') }}" alt="Facebook Advance">
                 </a>
             </div>

@@ -10,6 +10,13 @@ return [
             'description' => 'ADVANCE DESCRIPTION...',
             'theme_color' => '#FF8100', // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
         ],
+        'otros' => [
+            'url' => [
+                'facebook' => 'https://www.google.com/',
+                'instagram' => 'https://www.google.com/',
+                'aviso_privacidad' => 'https://ontheline.trincoll.edu/images/bookdown/sample-local-pdf.pdf',
+            ],
+        ],
         'navbar' => [
             'inicio' => 'INICIO',
             'servicios' => 'SERVICIOS',
@@ -77,6 +84,7 @@ return [
             'first_para' => 'Gracias por ponerte en contacto',
             'second_para' => 'En breve uno de nuestros asesores se comunicará contigo',
             'button_text' => 'QUIERO MAYOR PROTECCIÓN',
+            'button_url' => 'https://www.google.com/',
             'wp_1' => [
                 'txt' => '55-1228-2494',
                 'url' => 'https://wa.me/5512282494',

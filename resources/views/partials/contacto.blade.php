@@ -22,7 +22,7 @@
                         <div class="second">
                             <div>
                                 <img src="{{ asset('images/content/whatsapp.svg') }}" width="30" height="30">
-                                <a class="fw-500 text-decoration-none text-dark" href="{{ config('recycle.web.contacto.wp_2.txt') }}" target="_blank">{{ config('recycle.web.contacto.wp_2.txt') }}</a>
+                                <a class="fw-500 text-decoration-none text-dark" href="{{ config('recycle.web.contacto.wp_2.url') }}" target="_blank">{{ config('recycle.web.contacto.wp_2.txt') }}</a>
                             </div>
                             <div class="mt-2">
                                 <img src="{{ asset('images/content/email.svg') }}" width="30" height="30">

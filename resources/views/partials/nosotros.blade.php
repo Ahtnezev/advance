@@ -39,7 +39,7 @@
                 <div class="col-12 col-sm-9 col-md-8 col-lg-6 mx-auto">
                     <img class="mayor__proteccion__logo" src="{{ asset('images/content/advance_logo_02.svg') }}" alt="ADVANCE">
                     <p class="fw-500 text-justify mb-3">{{ config('recycle.web.nosotros.proteccion.para') }}</p>
-                    <a href="#" class="btn btn__orange fw-semibold rounded-0 d-flex align-items-center justify-content-center mt-4">{{ config('recycle.web.contacto.button_text') }}</a>
+                    <a href="{{ config('recycle.web.contacto.button_url') }}" target="_blank" class="btn btn__orange fw-semibold rounded-0 d-flex align-items-center justify-content-center mt-4">{{ config('recycle.web.contacto.button_text') }}</a>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
     const loader = document.getElementById('loading');
     setTimeout(() => { loader.style.display = 'none'; }, 500);
     // Eliminar overflow: hidden del body para permitir el desplazamiento
-    document.body.style.overflow = 'auto';
+    setTimeout(() => { document.body.style.overflow = 'auto'; }, 500);
 });
 
 /**------------------------------------------------------------------------

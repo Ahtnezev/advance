@@ -42,11 +42,20 @@
             <div class="col-12 col-sm-4">
                 <div class="c my-3 my-md-0 mb-xl-5 mb-xxl-0 d-lg-flex flex-lg-nowrap align-items-lg-center justify-content-lg-between justify-content-xxl-around">
                     <div class="social">
-                        <img class="social__insta img-fluid me-3" src="{{ asset('images/content/instagram.svg') }}" alt="Instagram Advance">
-                        <img class="social__face img-fluid" src="{{ asset('images/content/facebook.svg') }}" alt="Facebook Advance">
+                        <a href="{{ config('recycle.web.otros.url.instagram') }}" target="_blank">
+                            <img class="social__insta img-fluid me-3" src="{{ asset('images/content/instagram.svg') }}" alt="Instagram Advance">
+                        </a>
+                        <a href="{{ config('recycle.web.otros.url.facebook') }}" target="_blank">
+                            <img class="social__face img-fluid" src="{{ asset('images/content/facebook.svg') }}" alt="Facebook Advance">
+                        </a>
                     </div>
                     <div class="copy text-center pt-3 pb-5 pb-md-0">
-                        <a class="text-gray" href="#">{{ config('recycle.web.footer.aviso_privacidad') }}</a> <br>
+                        <a
+                            target="_blank"
+                            class="text-gray"
+                            href="{{ config('recycle.web.otros.url.aviso_privacidad') }}">
+                            {{ config('recycle.web.footer.aviso_privacidad') }}
+                        </a> <br>
                         <span class="text-gray">&copy; {{ config('recycle.web.footer.copy') }} {{ date('Y') }}</span>
                     </div>
                 </div>
